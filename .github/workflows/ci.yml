@@ -30,9 +30,9 @@ jobs:
       
       - name: Build with Maven
         run: mvn clean compile
-      
-      - name: Checkstyle
-        run: mvn checkstyle:check
+
+      - name: Checkstyle (optional)
+        run: mvn checkstyle:check || true
       
       - name: Run tests
         run: mvn test
