@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>cli-application</module>
     </modules>
 
     <properties>
