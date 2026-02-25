@@ -28,10 +28,10 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build with Maven (without Checkstyle)
+      - name: Build with Maven
         run: mvn clean compile
 
-      - name: Run Checkstyle (separate step, won't fail build)
+      - name: Run Checkstyle
         run: mvn checkstyle:check || echo "Checkstyle found violations but build continues"
         continue-on-error: true
 
