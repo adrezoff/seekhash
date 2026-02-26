@@ -2,11 +2,12 @@ package ru.adrezoff.cli.application;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.adrezoff.cli.application.command.base.HelpCommand;
 import ru.adrezoff.cli.application.shutdown.GracefulShutdownHandler;
 import ru.adrezoff.cli.application.ui.ConsoleUI;
 import ru.adrezoff.cli.application.command.Command;
 import ru.adrezoff.cli.application.command.CommandRegistry;
-import ru.adrezoff.cli.application.command.ExitCommand;
+import ru.adrezoff.cli.application.command.base.ExitCommand;
 
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
@@ -48,6 +49,7 @@ public class Application {
     }
 
     private void registerCommands() {
+        commandRegistry.register(new HelpCommand(commandRegistry));
         commandRegistry.register(new ExitCommand(this));
     }
 

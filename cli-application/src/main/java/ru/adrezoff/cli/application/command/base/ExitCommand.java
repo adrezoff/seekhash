@@ -1,8 +1,9 @@
-package ru.adrezoff.cli.application.command;
+package ru.adrezoff.cli.application.command.base;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.adrezoff.cli.application.Application;
+import ru.adrezoff.cli.application.command.Command;
 
 /**
  * @author Andrey Selin
